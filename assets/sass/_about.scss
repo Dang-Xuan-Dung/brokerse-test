@@ -1,0 +1,94 @@
+.about {
+  padding: 10rem 0;
+  &-desc {
+    padding-bottom: 10rem;
+  }
+
+  &-container {
+    @include flex;
+    gap: 10%;
+  }
+  &-media {
+    position: relative;
+    width: 57%;
+    height: auto;
+  }
+
+  &-video {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-play {
+    width: 98px;
+    height: 98px;
+    background: url(../images/play.png);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .active {
+    display: none;
+  }
+
+  &-content {
+    width: 32%;
+  }
+
+  &-heading-content {
+    padding-top: 2.2rem;
+  }
+
+  &-desc-content {
+    margin: 1rem 0 5rem 0;
+  }
+
+  &-item {
+    position: relative;
+    padding-left: 5.2rem;
+  }
+
+  &-title {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.1px;
+  }
+
+  &-sub-title {
+    padding: 0.5rem 0 3rem 0;
+  }
+
+  &-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+  }
+
+  @media (max-width: 1023px) {
+    &-container {
+      flex-direction: column;
+    }
+
+    &-media {
+      width: 100%;
+    }
+    &-video {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    &-content {
+      width: 90%;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &-item {
+      max-width: 33.3rem;
+    }
+  }
+}

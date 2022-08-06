@@ -1,0 +1,50 @@
+.menu {
+  @include flex;
+  gap: 0 2.1rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+
+  &-link {
+    color: $white-color-text;
+  }
+
+  &-toggle {
+    cursor: pointer;
+    display: none;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 3rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10rem 0;
+    transform: translateX(100%);
+    //  padding-right: 5rem;
+    width: 100%;
+    height: fit-content;
+    background-color: $dark-color-text;
+    transition: transform 0.3s linear;
+    z-index: 1;
+    opacity: 0.98;
+
+    &.is-show {
+      transform: translateX(0);
+    }
+
+    &-toggle {
+      display: block;
+    }
+    &-link {
+      font-weight: 400;
+      font-size: 2.5rem;
+      line-height: 4.5rem;
+    }
+
+    &-toggle {
+      z-index: 1;
+    }
+  }
+}

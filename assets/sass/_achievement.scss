@@ -1,0 +1,69 @@
+.achievement {
+  padding: 8rem 0;
+
+  &-desc {
+    padding-top: 1rem;
+  }
+
+  &-list {
+    @include grid(4, 0, 3rem);
+    margin-top: 5rem;
+  }
+
+  &-item {
+    margin-right: 1rem;
+    padding: 3rem 0;
+    background-color: $white-color-text;
+    text-align: center;
+  }
+
+  &-image {
+    width: 4.8rem;
+    height: 4.8rem;
+    margin: 0 auto;
+  }
+
+  &-title {
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 5.7rem;
+    padding-top: 1rem;
+    color: $dark-color-text;
+  }
+
+  &-content {
+    padding-top: 1rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: $gray-color-text;
+    letter-spacing: 0.1px;
+  }
+
+  @media (max-width: 1023px) {
+    padding: 4rem 0;
+
+    &-list {
+      @include grid(2, 4rem, 3rem);
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding: 10rem 0;
+
+    &-heading {
+      max-width: 25.5rem;
+    }
+    &-desc {
+      max-width: 22.5rem;
+    }
+    &-list {
+      @include grid(1, 3rem, 0);
+      place-items: center;
+    }
+
+    &-item {
+      width: 24rem;
+    }
+  }
+}

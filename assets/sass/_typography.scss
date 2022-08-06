@@ -1,0 +1,28 @@
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $font;
+  font-size: 1.4rem;
+  color: $white-color-text;
+  letter-spacing: 0.2px;
+}
+
+.heading {
+  color: $white-color-text;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5.7rem;
+}
+
+.light-text {
+  font-weight: 500;
+  line-height: 2rem;
+  color: $white-color-text;
+}
+
+.gray-text {
+  font-weight: 500;
+  line-height: 2rem;
+  color: $gray-color-text;
+}

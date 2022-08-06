@@ -1,0 +1,114 @@
+.hero {
+  padding-top: 8rem;
+
+  &-heading {
+    font-size: 5.8rem;
+    font-weight: 800;
+    line-height: 8rem;
+    max-width: 50.9rem;
+    margin: 0;
+  }
+
+  &-desc {
+    margin-top: 3.5rem;
+    max-width: 37.6rem;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+
+  &-button {
+    display: flex;
+    gap: 1rem;
+    margin-top: 3.5rem;
+  }
+
+  &-list {
+    margin-top: 8rem;
+    @include flex;
+    gap: 3rem 0;
+  }
+
+  &-item {
+    width: 33rem;
+    padding: 3.5rem 0 3.5rem 4rem;
+    background-color: $white-color-text;
+    border-radius: 2px;
+    transition: background-color 0.3s linear;
+
+    .hero-title {
+      margin-top: 1rem;
+      color: $dark-color-text;
+      font-weight: 700;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      letter-spacing: 0.1px;
+    }
+
+    .hero-content {
+      margin-top: 1rem;
+      max-width: 22.4rem;
+    }
+
+    .hero-image {
+      font-size: 48px;
+      color: $secondary-color;
+    }
+
+    &:hover {
+      background-color: $secondary-color;
+
+      .hero-title,
+      .hero-content {
+        color: $white-color-text;
+      }
+      .hero-image {
+        color: $white-color-text;
+      }
+    }
+  }
+
+  @media (max-width: 1023px) {
+    padding-top: 4rem;
+
+    &-list {
+      flex-direction: column;
+      justify-content: center;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-bottom: 20.5rem;
+    background: url(../images/test_bg.avif) no-repeat;
+    background-size: 100%;
+    background-size: cover;
+    transition: all 0.5s linear;
+
+    &.is-hero-active {
+      padding-top: 48rem;
+    }
+
+    &-heading {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 5.7rem;
+      text-align: center;
+      max-width: 35rem;
+      margin: 0 auto;
+    }
+
+    &-desc {
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 4rem;
+      max-width: 28rem;
+    }
+
+    &-button {
+      flex-direction: column;
+      align-items: center;
+      gap: 2.5rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.header {
+  background: #252b42 url(../images/background.png) no-repeat;
+  background-size: 100%;
+  padding-bottom: 11.2rem;
+
+  &-container {
+    @include flex;
+    padding: 3.6rem 0;
+  }
+
+  &-logo {
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color: $white-color-text;
+  }
+
+  &-nav {
+    @include flex;
+    gap: 3.9rem;
+  }
+
+  &-button {
+    display: flex;
+    gap: 1.8rem;
+  }
+
+  @media (max-width: 767px) {
+    background: none;
+    padding-bottom: 0;
+
+    &-container {
+      padding: 1rem 0;
+    }
+
+    &-logo {
+      z-index: 2;
+    }
+
+    &-nav {
+      right: 3rem;
+    }
+
+    &-button {
+      gap: 3.2rem;
+      z-index: 1;
+    }
+  }
+}

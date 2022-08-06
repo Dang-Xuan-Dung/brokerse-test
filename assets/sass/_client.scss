@@ -1,0 +1,40 @@
+.client {
+  &-list {
+    @include grid(6, 0, 3rem);
+  }
+
+  &-item {
+    transform: scale(68%);
+    align-self: center;
+  }
+
+  &-item:last-child {
+    transform: scale(50%);
+  }
+
+  @media (max-width: 1023px) {
+    &-list {
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0 2.5rem 5rem 2.5rem;
+    }
+
+    &-item {
+      justify-self: center;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &-list {
+      @include grid(1, 6rem, 3rem);
+    }
+
+    &-item {
+      transform: scale(100%);
+      justify-self: center;
+    }
+
+    &-item:last-child {
+      transform: scale(100%);
+    }
+  }
+}
