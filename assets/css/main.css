@@ -351,10 +351,13 @@ body {
   color: #737373;
 }
 
+body {
+  background-color: #252b42;
+}
+
 .wrapper {
   max-width: 1440px;
   margin: 0 auto;
-  background-color: #252b42;
 }
 
 .container {
@@ -1261,6 +1264,12 @@ li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 2rem;
 }
 @media (max-width: 1023px) {
@@ -1304,4 +1313,12 @@ li {
     padding: 2.5rem 0;
     margin: 0 auto;
   }
+}
+
+.text {
+  background: green;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
 }

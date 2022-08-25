@@ -67,7 +67,7 @@
   }
 
   &-social-list {
-    display: flex;
+    @include flex;
     gap: 2rem;
   }
 
